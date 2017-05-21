@@ -6,5 +6,6 @@ while x < 10:
   max_no = y 
  x = x + 1
 print 'There is no Odd Number' if max_no == 0 else max_no
+print x
   
  
