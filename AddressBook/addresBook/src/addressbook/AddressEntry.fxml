@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="addressbook.AddressEntryController">
+   <children>
+      <Pane prefHeight="415.0" prefWidth="600.0">
+         <children>
+            <JFXTextField fx:id="namField" labelFloat="true" layoutX="14.0" layoutY="37.0" prefHeight="25.0" prefWidth="248.0" promptText="Name" />
+            <JFXTextField fx:id="phoneField" labelFloat="true" layoutX="14.0" layoutY="84.0" prefHeight="25.0" prefWidth="248.0" promptText="Phone Number" />
+            <JFXTextField fx:id="addressField" labelFloat="true" layoutX="14.0" layoutY="141.0" prefHeight="25.0" prefWidth="248.0" promptText="Address" />
+            <JFXTextField fx:id="companyField" labelFloat="true" layoutX="14.0" layoutY="200.0" prefHeight="25.0" prefWidth="248.0" promptText="Company" />
+            <JFXTextField fx:id="emailField" labelFloat="true" layoutX="14.0" layoutY="257.0" prefHeight="25.0" prefWidth="248.0" promptText="Email" />
+            <JFXButton fx:id="saveBtn" buttonType="RAISED" layoutX="278.0" layoutY="354.0" onAction="#SaveData" ripplerFill="#e2ed13" style="-fx-background-color: WHITE;" text="SAVE" />
+            <JFXButton fx:id="cancelBtn" buttonType="RAISED" layoutX="504.0" layoutY="354.0" onAction="#CancelOp" ripplerFill="#e9da0f" style="-fx-background-color: WHITE;" text="CANCEL" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="334.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <JFXButton buttonType="RAISED" layoutX="374.0" layoutY="238.0" ripplerFill="#d3b9b9" style="-fx-background-color: WHITE;" text="ADD IMAGE" />
+            <JFXDatePicker fx:id="birthdayField" layoutX="14.0" layoutY="307.0" prefHeight="35.0" prefWidth="248.0" promptText="Date Of Birth" />
+            <JFXButton fx:id="delBtn" buttonType="RAISED" layoutX="386.0" layoutY="354.0" onAction="#deleteData" ripplerFill="#ef0b0b" style="-fx-background-color: WHITE;" text="DELETE" />
+         </children>
+      </Pane>
+   </children>
+</VBox>
