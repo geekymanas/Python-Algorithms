@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableColumn?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane stylesheets="@main.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="addressbook.AddressBookController">
+   <center>
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <JFXTreeTableView fx:id="treeTableView" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                 <columns>
+                     <JFXTreeTableColumn fx:id="name" minWidth="120" resizable="false" text="Name" />
+                     <JFXTreeTableColumn fx:id="birthDay" minWidth="120" resizable="false" text="DOB" />
+                     <JFXTreeTableColumn fx:id="company" minWidth="120" resizable="false" text="Company" />
+                     <JFXTreeTableColumn fx:id="phNo" minWidth="120" resizable="false" text="Phone" />
+                     <JFXTreeTableColumn fx:id="email" minWidth="120" resizable="false" text="Email" />
+                     <JFXTreeTableColumn fx:id="address" minWidth="120" resizable="false" text="Address" />
+                 </columns>
+             </JFXTreeTableView>
+         </children>
+      </GridPane>
+   </center>
+   <top>
+      <Pane prefHeight="84.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <children>
+            <JFXTextField fx:id="nameField" labelFloat="true" layoutX="43.0" layoutY="29.0" prefHeight="25.0" prefWidth="286.0" promptText="Name" />
+            <JFXButton fx:id="srchButton" buttonType="RAISED" defaultButton="true" layoutX="355.0" layoutY="30.0" onAction="#searchOp" prefHeight="25.0" prefWidth="104.0" ripplerFill="#334a97" style="-fx-font-size:14px;-fx-background-color:WHITE;" text="Search" />
+            <JFXButton fx:id="addBtn" buttonType="RAISED" layoutX="498.0" layoutY="29.0" onAction="#showAddInput" prefHeight="30.0" prefWidth="84.0" ripplerFill="#d0b14a" style="-fx-background-color: WHITE;" text="ADD" />
+        </children>
+      </Pane>
+   </top>
+</BorderPane>
